@@ -16,7 +16,7 @@
         <tr *ngFor="let movie of movies" [ngClass]="{'premiere': movie.premiere} ">
             <td>
                 <span class="badge text-bg-warning" *ngIf="movie.premiere == true">ESTRENO</span>  
-                <img [src]="movie.poster" alt="Harry Potter"></td>
+                <img [src]="movie.poster" width="200px" height="285px" alt="Harry Potter"></td>
             <td>{{movie.genres}}</td>
             <td>{{movie.price | currency}}</td>
             <td>{{movie.tickets}} </td>

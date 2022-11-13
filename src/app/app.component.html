@@ -1,62 +1,85 @@
+<nav
+  class="navbar navbar-expand-lg"
+  style="background-color: rgba(0, 0, 0, 0.2);"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand mb-0 h1 text-white">
+      <img
+        class="d-inline-block aling-top text-title"
+        src="https://images.vexels.com/media/users/3/191710/isolated/lists/9c2eb258b1e7e08653e989a74d76ef89-buen-trazo-de-claqueta.png"
+        width="55"
+        heigh="30"
+      />
+      Cinemania
+    </a>
 
-<nav class="navbar navbar-expand-lg " style="background-color: rgba(0, 0, 0, 0.2);">
-    <div class="container-fluid">
-      <a class="navbar-brand mb-0 h1 text-white">
-        <img class="d-inline-block aling-top text-title" src="/assets/img/logo.png" width="50" heigh="30"> Cinemania
-      </a>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" [routerLink]="['/']">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" [routerLink]="['/about']">Sobre nosotros</a>
-          </li>
-        </ul>
-      </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/']">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/about']"
+            >Sobre nosotros</a
+          >
+        </li>
+      </ul>
     </div>
-  </nav>
-
-  
-  <div class="container " >
-    <router-outlet></router-outlet>
   </div>
+</nav>
 
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
 
-  <footer class="text-center text-white" style="background-color: rgba(0, 0, 0, 0.2);">
-    <div class="container p-4 pb-0">
-      <section class="">
-        <form action="">
-          <div class="row d-flex justify-content-center">
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Recibí nuestro newsletter</strong>
-              </p>
-            </div>
-  
-            <div class="col-md-5 col-12">
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example29" class="form-control" placeholder="Ingresa tu email" />
-              </div>
-            </div>
-  
-            <div class="col-auto">
-              <button type="submit" class="btn btn-outline-light mb-4">
-                Subscribirse
-              </button>
+<footer
+  class="text-center text-white"
+  style="background-color: rgba(0, 0, 0, 0.2);"
+>
+  <div class="container p-4 pb-0">
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Recibí nuestro newsletter</strong>
+            </p>
+          </div>
+
+          <div class="col-md-5 col-12">
+            <div class="form-outline form-white mb-4">
+              <input
+                type="email"
+                id="form5Example29"
+                class="form-control"
+                placeholder="Ingresa tu email"
+              />
             </div>
           </div>
-        </form>
-      </section>
-    </div>
 
+          <div class="col-auto">
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribirse
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
 
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="">{{title}}</a>
-    </div>
-  </footer>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="">{{ title }}</a>
+  </div>
+</footer>
