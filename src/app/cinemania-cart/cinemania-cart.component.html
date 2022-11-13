@@ -1,0 +1,7 @@
+
+<h2 class="text-center mb-4" >Boletería</h2>
+<ul>
+    <li class="mb-3" *ngFor="let movie of ticketsList$ |async">
+        {{movie.title}} - Cant. {{movie.quantity}} 
+    </li>
+</ul>

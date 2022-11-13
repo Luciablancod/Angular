@@ -1,0 +1,37 @@
+<div class="container mr-5">
+
+<h2 class="mb-4">En cartelera</h2>
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Pelicula</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Precio</th>
+            <th scope="col" >Disponibilidad</th>
+            <th scope="col">Comprar</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies" [ngClass]="{'premiere': movie.premiere} ">
+            <td>
+                <span class="badge text-bg-warning" *ngIf="movie.premiere == true">ESTRENO</span>  
+                <img [src]="movie.poster" alt="Harry Potter"></td>
+            <td>{{movie.genres}}</td>
+            <td>{{movie.price | currency}}</td>
+            <td>{{movie.tickets}} </td>
+            <td> 
+                <span class="badge text-bg-danger " *ngIf="movie.tickets==0">AGOTADO</span> 
+                <app-input-number [(quantity)]= "movie.quantity" [max]="movie.tickets" (maxReached)="maxReached($event)" *ngIf="movie.tickets">
+                </app-input-number>
+
+
+            </td>
+            <td>
+                <button class="btn btn-outline-light" (click)="addToCart(movie)" *ngIf="movie.tickets">Comprar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
