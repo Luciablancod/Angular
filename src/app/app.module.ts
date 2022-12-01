@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { CinemaniaAboutComponent } from './cinemania-about/cinemania-about.component';
 import { CinemaniaMoviesComponent } from './cinemania-movies/cinemania-movies.component';
 import { CinemaniaCartComponent } from './cinemania-cart/cinemania-cart.component';
-import { InputNumberComponent } from './input-number/input-number.component'
+import { InputNumberComponent } from './input-number/input-number.component';
+import { CinemaniaIndexComponent } from './cinemania-index/cinemania-index.component'
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { InputNumberComponent } from './input-number/input-number.component'
     CinemaniaMoviesComponent,
     CinemaniaCartComponent,
     InputNumberComponent,
+    CinemaniaIndexComponent,
   ],
   imports: [
     BrowserModule,
